@@ -3,15 +3,15 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const config = {
-  apiKey: "AIzaSyAzwHmWodJDO10ASTYdohWDAFCUbYZS7hw",
-  authDomain: "expo-app-27aef.firebaseapp.com",
-  projectId: "expo-app-27aef",
-  storageBucket: "expo-app-27aef.appspot.com",
-  messagingSenderId: "144666709487",
-  appId: "1:144666709487:web:c2c6f42577934b392dfa1a",
-  measurementId: "G-T6YP6NQSXE"
+    apiKey: "AIzaSyAzwHmWodJDO10ASTYdohWDAFCUbYZS7hw",
+    authDomain: "expo-app-27aef.firebaseapp.com",
+    projectId: "expo-app-27aef",
+    storageBucket: "expo-app-27aef.appspot.com",
+    messagingSenderId: "144666709487",
+    appId: "1:144666709487:web:c2c6f42577934b392dfa1a",
+    measurementId: "G-T6YP6NQSXE"
 };
- 
+
 // Initialize Firebase
 const app = initializeApp(config);
 

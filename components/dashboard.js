@@ -19,9 +19,7 @@ import Button from "../elements/Button";
 import ImageViewer from "../elements/ImageViewer";
 import CircleButton from "../elements/CircleButton";
 import IconButton from "../elements/IconButton";
-import EmojiPicker from "../elements/EmojiPicker";
-import EmojiList from "../elements/EmojiList";
-import EmojiSticker from "../elements/EmojiSticker";
+
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { useRoute } from "@react-navigation/native";
 import { ActivityIndicator } from "react-native";
@@ -127,6 +125,7 @@ const Dashboard = forwardRef(({ navigation }, ref) => {
       try {
         const localUri = await captureRef(imageRef, {
           height: 440,
+          
           quality: 1,
         });
   
@@ -191,9 +190,6 @@ const Dashboard = forwardRef(({ navigation }, ref) => {
             placeholderImageSource={PlaceholderImage}
             selectedImage={selectedImage}
           />
-          {pickedEmoji !== null ? (
-            <EmojiSticker imageSize={40} stickerSource={pickedEmoji} />
-          ) : null}
         </View>
       </View>
       {showAppOptions ? (
@@ -219,7 +215,7 @@ const Dashboard = forwardRef(({ navigation }, ref) => {
                           Predicted Class: {results.class}
                         </Text>
                         <Text style={styles.resultScore}>
-                          Confidence Score: {results.confidence}
+                          Confidence Score: {(((results.confidence)* 100).toFixed(2) + '%')}
                         </Text>
                       </View>
                     ) : (
