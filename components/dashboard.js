@@ -37,7 +37,6 @@ const Dashboard = forwardRef(({ navigation }, ref) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [showAppOptions, setShowAppOptions] = useState(false);
-  const [pickedEmoji, setPickedEmoji] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [status, requestPermission] = MediaLibrary.usePermissions();
   const imageRef = useRef();
@@ -125,7 +124,7 @@ const Dashboard = forwardRef(({ navigation }, ref) => {
       try {
         const localUri = await captureRef(imageRef, {
           height: 440,
-          
+
           quality: 1,
         });
   
